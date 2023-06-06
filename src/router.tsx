@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "./App";
+import LevelOne from "./containers/LevelOne/LevelOne";
 
 const router = createBrowserRouter([
     {
@@ -8,7 +9,7 @@ const router = createBrowserRouter([
     },
     {
         path: '1',
-        element: <div>Placeholder</div>,
+        Component: LevelOne,
     }
 ]);
 

@@ -1,5 +1,5 @@
-import React, { FC, ReactNode } from 'react';
-import Button from '../Button/Button.lazy';
+import { FC, ReactNode } from 'react';
+import Button from '../Button/Button';
 
 export interface LinkButtonProps {
   url?: string;
