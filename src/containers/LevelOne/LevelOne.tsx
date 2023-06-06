@@ -2,9 +2,7 @@ import { FC } from 'react';
 import KeysPressed from '../../components/KeysPressed/KeysPressed';
 import MiddleOfContent from '../../components/MiddleOfContent/MiddleOfContent';
 
-interface LevelOneProps {}
-
-const LevelOne: FC<LevelOneProps> = () => (
+const LevelOne: FC = () => (
   <MiddleOfContent>
     <KeysPressed />
   </MiddleOfContent>

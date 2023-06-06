@@ -1,9 +1,7 @@
 import { FC } from 'react';
 import MiddleOfContent from '../MiddleOfContent/MiddleOfContent';
 
-interface LoadingProps {}
-
-const Loading: FC<LoadingProps> = () => (
+const Loading: FC = () => (
   <MiddleOfContent>
     <div className='animate-spin'></div>
   </MiddleOfContent>

@@ -1,4 +1,4 @@
-import { FC, ReactNode } from "react";
+import { FC, ReactNode } from 'react';
 
 interface MiddleOfContentProps {
   children?: ReactNode;
@@ -6,8 +6,8 @@ interface MiddleOfContentProps {
 
 const MiddleOfContent: FC<MiddleOfContentProps> = ({ children }) => (
   <div
-    data-testid="MiddleOfContent"
-    className="flex flex-col h-full justify-center items-center"
+    data-testid='MiddleOfContent'
+    className='flex flex-col h-full justify-center items-center'
   >
     {children}
   </div>
