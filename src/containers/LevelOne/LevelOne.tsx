@@ -1,11 +1,11 @@
 import { FC } from 'react';
 import KeysPressed from '../../components/KeysPressed/KeysPressed';
-import MiddleOfContent from '../../components/MiddleOfContent/MiddleOfContent';
+import Level from '../../components/Level/Level';
 
 const LevelOne: FC = () => (
-  <MiddleOfContent>
+  <Level title={ 'Level 1' }>
     <KeysPressed />
-  </MiddleOfContent>
+  </Level>
 );
 
 export default LevelOne;

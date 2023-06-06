@@ -1,12 +1,12 @@
-import { FC } from 'react';
+import { FC, ReactNode } from 'react';
 
 interface TitleProps {
-  title: string;
+  children: ReactNode
 }
 
-const Title: FC<TitleProps> = ({ title }) => (
+const Title: FC<TitleProps> = ({ children }) => (
   <div className={ 'prose prose-xl' }>
-    { title }
+    { children }
   </div>
 );
 
