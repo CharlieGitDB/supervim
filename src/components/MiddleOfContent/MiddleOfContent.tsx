@@ -6,10 +6,10 @@ interface MiddleOfContentProps {
 
 const MiddleOfContent: FC<MiddleOfContentProps> = ({ children }) => (
   <div
-    data-testid='MiddleOfContent'
-    className='flex flex-col h-full justify-center items-center'
+    data-testid={ 'MiddleOfContent' }
+    className={ 'flex flex-col h-full justify-center items-center' }
   >
-    {children}
+    { children }
   </div>
 );
 

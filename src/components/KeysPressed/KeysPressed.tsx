@@ -4,8 +4,8 @@ const KeysPressed = () => {
   const keysPressed = useKeysPressed();
 
   return (
-    <div data-testid='KeysPressed'>
-      {keysPressed}
+    <div data-testid={ 'KeysPressed' }>
+      { keysPressed }
     </div>
   );
 };

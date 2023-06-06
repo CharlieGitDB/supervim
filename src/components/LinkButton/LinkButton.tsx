@@ -7,9 +7,9 @@ export interface LinkButtonProps {
 }
 
 const LinkButton: FC<LinkButtonProps> = ({ url, children, ...props }) => (
-  <a href={url}>
-    <Button {...props}>
-      {children}
+  <a href={ url }>
+    <Button { ...props }>
+      { children }
     </Button>
   </a>
 );
