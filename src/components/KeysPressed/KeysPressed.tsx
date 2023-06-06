@@ -4,7 +4,7 @@ const KeysPressed = () => {
   const keysPressed = useKeysPressed();
 
   return (
-    <div data-testid={ 'KeysPressed' }>
+    <div className={ 'tracking-widest' }>
       { keysPressed }
     </div>
   );

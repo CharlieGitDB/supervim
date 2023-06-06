@@ -6,7 +6,7 @@ export default function useKeysPressed() {
     const handleKeyPress = ({ key }: KeyboardEvent) => {
         const clone = [ ...keysPressed ];
         
-        if (clone.length > 14) {
+        if (clone.length > 19) {
             clone.shift();
             clone.unshift(key);
             clone.shift();
