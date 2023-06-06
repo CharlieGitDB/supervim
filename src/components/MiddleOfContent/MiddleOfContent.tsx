@@ -1,16 +1,16 @@
 import { FC, ReactNode } from "react";
 
-interface MiddleOfScreenProps {
+interface MiddleOfContentProps {
   children?: ReactNode;
 }
 
-const MiddleOfScreen: FC<MiddleOfScreenProps> = ({ children }) => (
+const MiddleOfContent: FC<MiddleOfContentProps> = ({ children }) => (
   <div
-    data-testid="MiddleOfScreen"
+    data-testid="MiddleOfContent"
     className="flex flex-col h-full justify-center items-center"
   >
     {children}
   </div>
 );
 
-export default MiddleOfScreen;
+export default MiddleOfContent;
