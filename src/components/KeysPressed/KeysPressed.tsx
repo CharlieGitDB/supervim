@@ -4,7 +4,7 @@ const KeysPressed = () => {
   const keysPressed = useKeysPressed();
 
   return (
-    <div className={ 'tracking-widest' }>
+    <div className={ 'min-h-[3%] tracking-widest' }>
       { keysPressed }
     </div>
   );
