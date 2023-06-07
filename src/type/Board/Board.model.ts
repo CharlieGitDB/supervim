@@ -1,150 +1,295 @@
 import { Row } from './Row.model';
 
-export type Board = {
-  rows: Row[];
-}
+export type Board = Row[];
 
-export const initState: Board = {
-  rows: [
+export const initState: Board = [
+  [
     {
-      boxes: [
-        {
-          villian: false,
-          active: true
-        },
-        {
-          villian: true,
-          active: false
-        },
-        {
-          villian: false,
-          active: false
-        },
-        {
-          villian: true,
-          active: false
-        },
-      ]
+      active: true,
+      villian: false
     },
     {
-      boxes: [
-        {
-          villian: false,
-          active: false
-        },
-        {
-          villian: true,
-          active: false
-        },
-        {
-          villian: false,
-          active: false
-        },
-        {
-          villian: false,
-          active: false
-        },
-      ]
+      active: false,
+      villian: true
     },
     {
-      boxes: [
-        {
-          villian: false,
-          active: false
-        },
-        {
-          villian: false,
-          active: false
-        },
-        {
-          villian: false,
-          active: false
-        },
-        {
-          villian: false,
-          active: false
-        },
-      ]
+      active: false,
+      villian: true
     },
     {
-      boxes: [
-        {
-          villian: true,
-          active: false
-        },
-        {
-          villian: false,
-          active: false
-        },
-        {
-          villian: false,
-          active: false
-        },
-        {
-          villian: false,
-          active: false
-        },
-      ]
+      active: false,
+      villian: true
+    },
+  ],
+  [
+    {
+      active: false,
+      villian: false
     },
     {
-      boxes: [
-        {
-          villian: false,
-          active: false
-        },
-        {
-          villian: false,
-          active: false
-        },
-        {
-          villian: false,
-          active: false
-        },
-        {
-          villian: false,
-          active: false
-        },
-      ]
+      active: false,
+      villian: false
     },
     {
-      boxes: [
-        {
-          villian: false,
-          active: false
-        },
-        {
-          villian: false,
-          active: false
-        },
-        {
-          villian: false,
-          active: false
-        },
-        {
-          villian: false,
-          active: false
-        },
-      ]
+      active: false,
+      villian: false
     },
     {
-      boxes: [
-        {
-          villian: false,
-          active: false
-        },
-        {
-          villian: false,
-          active: false
-        },
-        {
-          villian: false,
-          active: false
-        },
-        {
-          villian: false,
-          active: false
-        },
-      ]
+      active: false,
+      villian: false
+    },
+  ],
+  [
+    {
+      active: false,
+      villian: true
+    },
+    {
+      active: false,
+      villian: true
+    },
+    {
+      active: false,
+      villian: true
+    },
+    {
+      active: false,
+      villian: false
+    },
+  ],
+  [
+    {
+      active: false,
+      villian: false
+    },
+    {
+      active: false,
+      villian: false
+    },
+    {
+      active: false,
+      villian: false
+    },
+    {
+      active: false,
+      villian: false
+    },
+  ],
+  [
+    {
+      active: false,
+      villian: true
+    },
+    {
+      active: false,
+      villian: false
+    },
+    {
+      active: false,
+      villian: true
+    },
+    {
+      active: false,
+      villian: true
+    },
+  ],
+  [
+    {
+      active: false,
+      villian: false
+    },
+    {
+      active: false,
+      villian: false
+    },
+    {
+      active: false,
+      villian: true
+    },
+    {
+      active: false,
+      villian: true
+    },
+  ],
+  [
+    {
+      active: false,
+      villian: false
+    },
+    {
+      active: false,
+      villian: true
+    },
+    {
+      active: false,
+      villian: true
+    },
+    {
+      active: false,
+      villian: true
+    },
+  ],
+  [
+    {
+      active: false,
+      villian: false
+    },
+    {
+      active: false,
+      villian: false
+    },
+    {
+      active: false,
+      villian: false
+    },
+    {
+      active: false,
+      villian: false
     },
   ]
-};
+];
+
+// export const initState: Board = {
+//   rows: [
+//     {
+//       boxes: [
+//         {
+//           villian: false,
+//           active: true
+//         },
+//         {
+//           villian: true,
+//           active: false
+//         },
+//         {
+//           villian: false,
+//           active: false
+//         },
+//         {
+//           villian: true,
+//           active: false
+//         },
+//       ]
+//     },
+//     {
+//       boxes: [
+//         {
+//           villian: false,
+//           active: false
+//         },
+//         {
+//           villian: true,
+//           active: false
+//         },
+//         {
+//           villian: false,
+//           active: false
+//         },
+//         {
+//           villian: false,
+//           active: false
+//         },
+//       ]
+//     },
+//     {
+//       boxes: [
+//         {
+//           villian: false,
+//           active: false
+//         },
+//         {
+//           villian: false,
+//           active: false
+//         },
+//         {
+//           villian: false,
+//           active: false
+//         },
+//         {
+//           villian: false,
+//           active: false
+//         },
+//       ]
+//     },
+//     {
+//       boxes: [
+//         {
+//           villian: true,
+//           active: false
+//         },
+//         {
+//           villian: false,
+//           active: false
+//         },
+//         {
+//           villian: false,
+//           active: false
+//         },
+//         {
+//           villian: false,
+//           active: false
+//         },
+//       ]
+//     },
+//     {
+//       boxes: [
+//         {
+//           villian: false,
+//           active: false
+//         },
+//         {
+//           villian: false,
+//           active: false
+//         },
+//         {
+//           villian: false,
+//           active: false
+//         },
+//         {
+//           villian: false,
+//           active: false
+//         },
+//       ]
+//     },
+//     {
+//       boxes: [
+//         {
+//           villian: false,
+//           active: false
+//         },
+//         {
+//           villian: false,
+//           active: false
+//         },
+//         {
+//           villian: false,
+//           active: false
+//         },
+//         {
+//           villian: false,
+//           active: false
+//         },
+//       ]
+//     },
+//     {
+//       boxes: [
+//         {
+//           villian: false,
+//           active: false
+//         },
+//         {
+//           villian: false,
+//           active: false
+//         },
+//         {
+//           villian: false,
+//           active: false
+//         },
+//         {
+//           villian: false,
+//           active: false
+//         },
+//       ]
+//     },
+//   ]
+// };

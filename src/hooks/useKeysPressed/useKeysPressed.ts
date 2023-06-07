@@ -1,9 +1,9 @@
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
 export default function useKeysPressed() {
     const [ keysPressed, setKeysPressed ] = useState<string[]>([]);
 
-    const handleKeyPress = ({ key }: KeyboardEvent) => {
+    const handleKeyPress = useCallback(({ key }: KeyboardEvent) => {
         const clone = [ ...keysPressed ];
         
         if (clone.length > 19) {
@@ -15,12 +15,12 @@ export default function useKeysPressed() {
         }
 
         setKeysPressed(clone);
-    };
+    }, [ keysPressed ]);
 
     useEffect(() => {
         window.addEventListener('keypress', handleKeyPress);
         return () => window.removeEventListener('keypress', handleKeyPress);
-    });
+    }, [ handleKeyPress ]);
 
     return keysPressed;
 }
