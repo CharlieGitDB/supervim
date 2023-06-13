@@ -19,7 +19,7 @@ module.exports = {
     'array-bracket-spacing': [ 'error', 'always' ],
     'react/jsx-curly-spacing': [ 'error', { 'when': 'always', 'children': true } ],
     'react/react-in-jsx-scope': [ 0, 'never' ],
-    'react/jsx-curly-brace-presence': [ 'error', 'always' ],
+    'react/jsx-curly-brace-presence': [ 'error', { 'props': 'always', 'propElementValues': 'always', 'children': 'never',  } ],
     'react/jsx-space-before-closing': [ 'error', 'always' ]
   }
 };
