@@ -20,5 +20,13 @@ export default function useBoardValue() {
     return () => window.removeEventListener('keypress', handleKeyPress);
   }, [ board, position ]);
 
-  return board;
+  const resetBoard = () => {
+    setPosition({ x: 0, y: 0 });
+    setBoard(initState);
+  };
+
+  return {
+    board,
+    resetBoard
+  };
 }
