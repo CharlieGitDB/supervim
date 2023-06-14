@@ -1,5 +1,5 @@
-import React, { FC, ReactNode } from 'react';
-import Button from '../Button/Button.lazy';
+import { FC, ReactNode } from 'react';
+import Button from '../Button/Button';
 
 export interface LinkButtonProps {
   url?: string;
@@ -7,9 +7,9 @@ export interface LinkButtonProps {
 }
 
 const LinkButton: FC<LinkButtonProps> = ({ url, children, ...props }) => (
-  <a href={url}>
-    <Button {...props}>
-      {children}
+  <a href={ url }>
+    <Button { ...props }>
+      { children }
     </Button>
   </a>
 );

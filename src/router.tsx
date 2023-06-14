@@ -1,5 +1,6 @@
-import { createBrowserRouter } from "react-router-dom";
-import App from "./App";
+import { createBrowserRouter } from 'react-router-dom';
+import App from './App';
+import { LevelOne, LevelTwo } from './containers/containers';
 
 const router = createBrowserRouter([
     {
@@ -8,7 +9,11 @@ const router = createBrowserRouter([
     },
     {
         path: '1',
-        element: <div>Placeholder</div>,
+        Component: LevelOne,
+    },
+    {
+        path: '2',
+        Component: LevelTwo
     }
 ]);
 

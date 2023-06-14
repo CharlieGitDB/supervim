@@ -1,12 +1,16 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  mode: 'jit',
   content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
+    './src/**/*.{js,jsx,ts,tsx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      animation: {
+      },
+    },
   },
   plugins: [
     require('@tailwindcss/typography')
   ],
-}
+};

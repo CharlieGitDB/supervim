@@ -1,13 +1,10 @@
-import { FC } from "react";
-import LinkButton from "./components/LinkButton/LinkButton.lazy";
-import MiddleOfScreen from "./components/MiddleOfScreen/MiddleOfScreen.lazy";
+import { FC } from 'react';
+import Start from './components/Start/Start';
 
 const App: FC = () => (
-  <MiddleOfScreen>
-    <div className="prose prose-xl">Welcome to Super Vim!</div>
-    <div className="prose prose-lg">This is a game that is a (hopefully) somewhat fun way to learn VIM</div>
-    <LinkButton url={'1'}>Start</LinkButton>
-  </MiddleOfScreen>
+  <>
+    <Start />
+  </>
 );
 
 export default App;
