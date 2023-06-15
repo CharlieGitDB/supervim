@@ -26,7 +26,7 @@ const LevelOne: FC = () => {
   }, [ board, resetBoard, showHit, navigate ]);
 
   return (
-    <Level title={ 'Level 1' }>
+    <Level title={ 'Level 1 - Basic Motions' }>
       <KeysPressed />
       <div className={ 'prose prose-lg' }>You will need to move around the board to avoid bombs!</div>
       <div className={ 'prose prose-lg' }>With vim you use the keys h, j, k, l to move around</div>
