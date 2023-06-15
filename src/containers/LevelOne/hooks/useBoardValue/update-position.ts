@@ -1,4 +1,4 @@
-import { Position } from '../../type/Board/Position.model';
+import { Position } from '../../../../shared/types/types';
 
 export const updatePosition = (key: string, position: Position) => {
   const updatedPosition = { ...position };
@@ -17,7 +17,6 @@ export const updatePosition = (key: string, position: Position) => {
         updatedPosition.x = updatedPosition.x >= 3 ? updatedPosition.x : updatedPosition.x + 1;
         break;
       default:
-        console.log('nothing');
         break;
     }
 

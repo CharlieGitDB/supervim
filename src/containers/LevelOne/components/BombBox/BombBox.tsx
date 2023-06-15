@@ -1,7 +1,7 @@
 import { FC } from 'react';
-import { Box } from '../../type/Board/Box.model';
+import { BombBox } from '../../types/BombBox.model';
 
-const Box: FC<Box> = ({ villian, active }) => {
+const BombBox: FC<BombBox> = ({ villian, active }) => {
   const staticClasses = 'border p-2 m-1 w-16 h-16 flex items-center justify-center';
   const classes = active ? `${staticClasses} ${villian ? 'bg-red-500' : 'bg-teal-500'}` : `${staticClasses}`;
 
@@ -12,4 +12,4 @@ const Box: FC<Box> = ({ villian, active }) => {
   );
 };
 
-export default Box;
+export default BombBox;

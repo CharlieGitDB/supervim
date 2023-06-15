@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import Start from './components/Start/Start';
+import { Start } from './containers/containers';
 
 const App: FC = () => (
   <>

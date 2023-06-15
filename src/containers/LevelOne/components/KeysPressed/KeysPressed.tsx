@@ -1,4 +1,4 @@
-import useKeysPressed from '../../hooks/useKeysPressed/useKeysPressed';
+import { useKeysPressed } from '../../hooks/hooks';
 
 const KeysPressed = () => {
   const keysPressed = useKeysPressed();

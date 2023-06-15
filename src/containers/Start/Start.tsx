@@ -1,6 +1,6 @@
 import { ChangeEvent, FC, KeyboardEvent, useEffect, useRef, useState } from 'react';
-import MiddleOfContent from '../MiddleOfContent/MiddleOfContent';
-import TextInput from '../TextInput/TextInput';
+import MiddleOfContent from '../../shared/components/MiddleOfContent/MiddleOfContent';
+import TextInput from '../../shared/components/TextInput/TextInput';
 import { useNavigate } from 'react-router-dom';
 
 const Start: FC = () => {

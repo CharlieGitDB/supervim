@@ -1,6 +1,7 @@
-import { Board } from '../../type/Board/Board.model';
+import { Board } from '../../../../shared/types/types';
+import { BombBox } from '../../types/BombBox.model';
 
-export const moveBox = (board: Board, x: number, y: number): Board => {
+export const moveBox = (board: Board<BombBox>, x: number, y: number): Board<BombBox> => {
   const newBoard = board.map((r, i) => {
     if (i === y) {
       return r.map((b, i) => {

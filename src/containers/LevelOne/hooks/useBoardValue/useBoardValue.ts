@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react';
-
-import { Board, initState } from '../../type/Board/Board.model';
-import { Position } from '../../type/Board/Position.model';
+import { Board, Position } from '../../../../shared/types/types';
+import { boardState } from '../../init/board-state';
+import { BombBox } from '../../types/BombBox.model';
 import { moveBox } from './move-box';
 import { updatePosition } from './update-position';
 
 export default function useBoardValue() {
-  const [ board, setBoard ] = useState<Board>(initState);
+  const [ board, setBoard ] = useState<Board<BombBox>>(boardState);
   const [ position, setPosition ] = useState<Position>({ x: 0, y: 0 });
   
   useEffect(() => {
@@ -22,7 +22,7 @@ export default function useBoardValue() {
 
   const resetBoard = () => {
     setPosition({ x: 0, y: 0 });
-    setBoard(initState);
+    setBoard(boardState);
   };
 
   return {

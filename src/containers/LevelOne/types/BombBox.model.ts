@@ -1,4 +1,4 @@
-export type Box = {
+export type BombBox = {
   villian: boolean;
   active: boolean;
 }

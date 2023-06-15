@@ -1,28 +1,13 @@
 import { FC, useEffect, useState } from 'react';
-import Box from '../../components/Box/Box';
-import Grid from '../../components/Grid/Grid';
-import KeysPressed from '../../components/KeysPressed/KeysPressed';
-import Level from '../../components/Level/Level';
-import Row from '../../components/Row/Row';
-import useBoardValue from '../../hooks/useBoardValue/useBoardValue';
 import { useNavigate } from 'react-router-dom';
+import { Grid, Level, Row } from '../../shared/components/components';
+import { BombBox, Hit, KeysPressed } from './components/components';
+import { useBoardValue } from './hooks/hooks';
 
 const LevelOne: FC = () => {
   const { board, resetBoard } = useBoardValue();
   const [ showHit, setShowHit ] = useState<boolean>(false);
   const navigate = useNavigate();
-  
-  const Hit = () => {
-    let classes = '';
-
-    if (showHit) {
-      classes += 'prose prose-xl text-red-500 animate-pulse';
-    } else {
-      classes += 'invisible';
-    }
-    
-    return <div className={ classes }>You have hit a bomb start over!</div>;
-  };
   
   useEffect(() => {
     const isHit = board.some(b => b.some(x => x.active && x.villian));
@@ -43,15 +28,17 @@ const LevelOne: FC = () => {
   return (
     <Level title={ 'Level 1' }>
       <KeysPressed />
-      <div className={ 'prose prose-lg' }>In vim: h = left, j = dow, k = up, l = right</div>
-      <Hit />
+      <div className={ 'prose prose-lg' }>You will need to move around the board to avoid bombs!</div>
+      <div className={ 'prose prose-lg' }>With vim you use the keys h, j, k, l to move around</div>
+      <div className={ 'prose prose-lg' }>h = left, j = dow, k = up, l = right</div>
+      <Hit showHit={ showHit } />
       <Grid>
         { 
           board.map((r, i) => (
             <Row key={ i }>
               { 
                 r.map(({ active, villian }, i) => (
-                  <Box key={ i } active={ active } villian={ villian } />
+                  <BombBox key={ i } active={ active } villian={ villian } />
                 )) 
               }
             </Row>
