@@ -10,7 +10,7 @@ const LevelOne: FC = () => {
   const navigate = useNavigate();
   
   useEffect(() => {
-    const isHit = board.some(b => b.some(x => x.active && x.villian));
+    const isHit = board.some(r => r.some(b => b.active && b.villian));
     if (isHit) {
       resetBoard();
       setShowHit(true);
