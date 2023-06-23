@@ -1,6 +1,7 @@
 import { Board } from '../../../shared/types/Board/Board.model';
+import { BombBox } from '../types/BombBox.model';
 
-export const boardState: Board = [
+export const boardState: Board<BombBox> = [
     [
       {
         active: true,
